@@ -1,0 +1,37 @@
+<h1>Ajax#index</h1>
+<p>Find me in app/views/ajax/index.html.erb</p>
+
+<p id ="ajax">Jqualyは動作していません</p>
+
+<table>
+  <%=form_tag({controller: 'ajax', action:'data'},remote:true) do %>
+  <tr>
+    <th>name</th>
+    <th><%= text_field_tag :name %></th>
+  </tr>
+   <tr>
+       <td><%= submit_tag "送信"%></td>
+   </tr>
+　  <%end%>
+
+</table>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th id="name"></th>
+  </tr>
+  <tr>
+    <th>MAIL</th>
+    <th id="mail"></th>
+  </tr>
+
+</table>
+
+
+
+<!-- <%=link_to 'linkby Ajax',{action:'data'},remote:true %> -->
+
+<!-- <script>
+  $('#ajax').text('Jqualyは動作しています')
+</script> -->
